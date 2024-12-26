@@ -1,0 +1,96 @@
+/* styles/About.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.aboutHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  padding: 2rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.aboutHeader.light {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutHeader.dark {
+  background: rgba(18, 18, 18, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Update the profile image container */
+.profileImage {
+  flex: 0 0 auto; /* Changed from flex: 1 to prevent stretching */
+  position: relative;
+  width: 300px; /* Fixed width */
+  height: 300px; /* Same as width for perfect circle */
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 0 auto; /* Center the image */
+}
+
+.profilePic {
+  position: relative !important; /* Override Next.js positioning */
+  border-radius: 50%;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block; /* Remove any potential inline spacing */
+}
+
+.aboutContent {
+  flex: 2;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.content p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .aboutHeader {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 20px;
+  }
+
+  .profileImage {
+    width: 200px; /* Smaller size for mobile */
+    height: 200px; /* Keep 1:1 ratio */
+    margin: 0 auto; /* Center on mobile */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .content {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

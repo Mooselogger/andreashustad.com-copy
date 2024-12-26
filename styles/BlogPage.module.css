@@ -1,0 +1,135 @@
+/* styles/BlogPage.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+}
+
+.postList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0;
+}
+
+.postItem {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.postItem:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  background-color: var(--card-hover-background-color);
+}
+
+.postLink {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.postImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.postContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+.postTitle {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.postExcerpt {
+  color: var(--text-color-secondary);
+  flex: 1;
+}
+
+.postDate {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  margin-top: auto;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.paginationLink {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.paginationLink:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .postTitle {
+    font-size: 1.5rem;
+  }
+
+  .postImage {
+    height: 150px;
+  }
+}

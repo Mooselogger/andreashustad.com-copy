@@ -1,0 +1,26 @@
+/* styles/Portfolio.module.css */
+
+.container {
+  min-height: 80vh;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.description {
+  font-size: 1.5rem;
+  color: var(--text-color-secondary);
+  margin-top: 1rem;
+}
